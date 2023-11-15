@@ -1,35 +1,34 @@
 <?php
 // session_start();
 if (empty($_SESSION['username_decafe'])) {
-    header('location: login');
+    header('location:login');
 }
-include "proses/connect.php";
-$query = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$_SESSION[username_decafe]'");
-$hasil = mysqli_fetch_array($query);
-?>
+    include "proses/connect.php";
+    $query = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$_SESSION[username_decafe]'");
+    $hasil = mysqli_fetch_array($query);
 
+
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DeCafe - Aplikasi Pemesanan Makana dan Minuman Cafe</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>DeCafe - Aplikasi Pemesanan Minuman dan Makanan Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
     <!-- header -->
-    <?php include("header.php"); ?>
-    <!-- end header -->
+    <?php include "header.php"; ?>
+    <!-- header end -->
+
     <div class="container-lg">
-        <div class="row">
+        <div class="row mb-5">
             <!-- sidebar -->
-
-            <?php include("sidebar.php"); ?>
-
+            <?php include "sidebar.php" ?>
             <!-- end sidebar -->
 
             <!-- content -->
@@ -38,34 +37,34 @@ $hasil = mysqli_fetch_array($query);
             ?>
             <!-- end content -->
         </div>
-        <div class="fixed-bottom text-center">
-            Copyright 2023 artha
+
+        <div class="fixed-bottom text-center bg-light py-2">
+            copyright 2023 artha
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-            'use strict'
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict'
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
 
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
 
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
+    
 </body>
 
 </html>
