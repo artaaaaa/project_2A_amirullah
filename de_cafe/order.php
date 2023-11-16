@@ -40,7 +40,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <input type="text" class="form-control" id="uploadFoto" name="kode_order" value="<?php echo date('ymdHi').rand(100,999)?>" readonly>
                                             <label for="uploadFoto">Kode Order</label>
                                             <div class="invalid-feedback">
-                                                Please choose a code order.
+                                                Masukkan Kode Order.
                                             </div>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <input type="number" class="form-control" id="floatingInput" placeholder="nomor meja" name="meja" required>
                                             <label for="floatingInput">Meja</label>
                                             <div class="invalid-feedback">
-                                                Please choose a num of tabel.
+                                                Masukkan No Meja.
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <input type="text" class="form-control" id="pelanggan" placeholder="Nama Pelanggan" name="pelanggan" required>
                                             <label for="pelanggan">Nama Pelanggan</label>
                                             <div class="invalid-feedback">
-                                                Please choose a name.
+                                                Masukkan Nama.
                                             </div>
                                         </div>
                                     </div>

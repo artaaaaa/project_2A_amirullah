@@ -3,7 +3,7 @@ include "proses/connect.php";
 
 $kode = $_GET['order'];
 $meja = $_GET['meja'];
-// $pelanggan = $_GET['pelanggan'];
+$pelanggan = $_GET['pelanggan'];
 
 $query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya FROM tb_list_order 
 LEFT JOIN tb_order ON  tb_order.id_order = tb_list_order.kode_order
