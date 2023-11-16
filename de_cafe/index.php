@@ -4,7 +4,7 @@
                 $page = "home.php";
                 include "main.php";
             } elseif (isset($_GET['x']) && $_GET['x'] == 'order') {
-                if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 3) {
+                if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 2 || $_SESSION['level_decafe'] == 3) {
                     $page = "order.php";
                     include "main.php";
                 } else {
@@ -68,6 +68,9 @@
             } elseif (isset($_GET['x']) && $_GET['x'] == 'viewitem') {
                 if ($_SESSION['level_decafe'] == 1) {
                     $page = "view_item.php";
+                    include "main.php";
+                } else {
+                    $page = "home.php";
                     include "main.php";
                 }
             } else {

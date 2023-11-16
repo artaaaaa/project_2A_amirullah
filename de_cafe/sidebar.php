@@ -6,7 +6,7 @@
             </button>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Decafe</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="width: 50px;"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -32,7 +32,6 @@
 
 
                         <?php if($hasil['level']==1 || $hasil['level']==2 || $hasil['level']==3) { ?>
-
                         <li class="nav-item">
                             <a class="nav-link ps-3 <?php echo (isset($_GET['x']) && $_GET['x'] == 'order') ? 'active link-light' : 'link-dark'; ?>" href="order"><i class="bi bi-cart4"></i> Order</a>
                         </li>
