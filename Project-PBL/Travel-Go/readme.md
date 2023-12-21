@@ -24,3 +24,31 @@ Dapat melihat informasi maskapai
 Dapat melakukan registrasi
 Dapat melihat onformasi promo
 Dapat melihat informasi tiket
+
+
+
+# Admin
+Tiket
+Promo
+maskapai
+User
+report
+# operator
+Tiket
+Promo
+maskapai
+report
+# pengguna terdaftar
+Dapat login
+Dapat register
+Dapat melakukan pemesanan
+Data melakukan pembayaran
+Dapat melihat informasi akun sendiri
+Dapat melihat informasi pemmbayaran
+Dapat melihat informasi tiket
+Dapat melihat inforasi promo
+Dapat melihat informasi maskapai
+# Tamu
+Dapat melakukan registrasi
+Dapat melihat onformasi promo
+Dapat melihat informasi tiket
