@@ -47,6 +47,8 @@
             <div class="signup_link">
                 Not a member? <a href="register.php">Signup</a>
             </div>
+            <b>Email:admin@admin.com</b>
+            <b>Password:password</b>
         </form>
     </div>
     <div class="fixed-bottom text-center mb-2">Copyright 2023 artha</div>
