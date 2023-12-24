@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body style="height :3000px">
+<body>
     <!-- Header -->
     <?php include "header.php"; ?>
     <!-- End header -->

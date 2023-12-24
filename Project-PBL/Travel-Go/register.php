@@ -1,8 +1,8 @@
 <?php
-    // session_start();
-    if(!empty($_SESSION['username_travelgo'])){
-        header('location:home');
-    }
+// session_start();
+if (!empty($_SESSION['username_travelgo'])) {
+    header('location:home');
+}
 ?>
 
 <!doctype html>
@@ -24,28 +24,40 @@
 
     <!-- End header -->
     <div class="center">
-        <h1>Login</h1>
-        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
-            <div class="txt_field">
-                <input name="username" type="email" required>
-                <span></span>
-                <label>Email</label>
+        <h1>Register</h1>
+        <form class="needs-validation" novalidate action="proses/proses_register.php" method="POST">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
                 <div class="invalid-feedback">
-                    Masukkan email yang valid
+                    Masukkan Nama.
                 </div>
             </div>
-            <div class="txt_field">
-                <input name="password" type="password" required>
-                <span></span>
-                <label>Password</label>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
                 <div class="invalid-feedback">
-                    Masukkan password
+                    Masukkan email yang valid.
                 </div>
             </div>
-            <div class="pass">Forgot Password?</div>
-            <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
-            <div class="signup_link">
-                Not a member? <a href="register.php">Signup</a>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="invalid-feedback">
+                    Masukkan password.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                <div class="invalid-feedback">
+                    Konfirmasi password tidak sesuai.
+                </div>
+            </div>
+            <button class="btn btn-primary w-100 py-2" type="submit" name="register_submit"
+                value="abc">Register</button>
+            <div class="mt-3 text-center">
+                Sudah punya akun? <a href="login.php">Login</a>
             </div>
         </form>
     </div>
